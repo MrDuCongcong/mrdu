@@ -81,8 +81,23 @@ class head extends React.Component {
 
 React 元素是[不可变对象](https://en.wikipedia.org/wiki/Immutable_object)。一旦被创建，你就无法更改它的子元素或者属性。一个元素就像电影的单帧：它代表了某个特定时刻的 UI。
 
-注意： 组件名称必须以大写字母开头。
+> 组件名称必须以大写字母开头。React 会将以小写字母开头的组件视为原生 DOM 标签。例如，
+>
+> `<div/> `代表 HTML 的 div 标签，而`<Welcome/>` 则代表一个组件，并且需在作用域内使用 Welcome。
 
-React 会将以小写字母开头的组件视为原生 DOM 标签。例如，
+### state
 
-`<div/> `代表 HTML 的 div 标签，而`<Welcome/>` 则代表一个组件，并且需在作用域内使用 Welcome。
+### 组件间的通信
+
+#### 父子组件的通信
+
+#### 兄弟组件的通信
+
+#### 跨组件的通信
+
+
+
+
+
+
+
