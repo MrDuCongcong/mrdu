@@ -2,7 +2,7 @@
  * @Author: DuCongcong
  * @Description: 当前配置的数据源下的所有表的列表
  * @Date: 2020-10-27 11:33:52
- * @LastEditTime: 2021-02-01 12:20:10
+ * @LastEditTime: 2021-07-07 16:04:02
 -->
 <template>
     <div class="table-list">
@@ -50,7 +50,9 @@ import api from '@/api/dsConsole';
 import * as icons from '@/utils/icons';
 import { mapState, mapGetters } from 'vuex';
 import _ from 'lodash';
+import { utils } from '#/index.js';
 
+const { typeHelper } = utils;
 export default {
     name: 'tableList',
     props: {
@@ -63,9 +65,11 @@ export default {
 
             page: {
                 size: 20,
-                index: 0,
+                index: -1,
                 cache: 2 // data中最多缓存两页
             },
+            allSize: 0,
+            lastPageSize: 0, // 主要是记录最后一页的长度，因为最后一页数据长度可能小于page.size
 
             keyword: '',
             tableList: [],
@@ -117,12 +121,23 @@ export default {
                         let data = res.data.rst;
                         if (Array.isArray(data) && data.length > 0) {
                             this.tableList = data.map(item => {
-                                let obj = {
-                                    tableName: item.first,
-                                    tableDes: item.second ?? '',
-                                    tableFiled: [],
-                                    loading: true
-                                };
+                                let obj = null;
+                                if (typeHelper.isPlanObject(item)) {
+                                    obj = {
+                                        tableName: item.first || '未命名',
+                                        tableDes: item.second ?? '',
+                                        tableFiled: [],
+                                        loading: true
+                                    };
+                                } else {
+                                    obj = {
+                                        tableName: item || '未命名',
+                                        tableDes: '',
+                                        tableFiled: [],
+                                        loading: true
+                                    };
+                                }
+
                                 return obj;
                             });
                         }
@@ -135,11 +150,11 @@ export default {
             });
         },
 
-        search(value) {
+        search: _.debounce(function() {
             this.resetPage();
 
             // 根据关键字从modelList过滤出来的数据作为数据池
-            if (value) {
+            if (this.keyword) {
                 this.data = [];
                 this.loading = true;
 
@@ -148,6 +163,7 @@ export default {
                     resolve(result);
                 }).then(res => {
                     this.dataPool = res;
+                    this.allSize = Math.ceil(this.dataPool.length / this.page.size);
                     this.nextPage();
                     this.loading = false;
                 });
@@ -155,9 +171,10 @@ export default {
             } else {
                 this.data = [];
                 this.dataPool = this.tableList;
+                this.allSize = Math.ceil(this.dataPool.length / this.page.size);
                 this.nextPage();
             }
-        },
+        }, 500),
 
         handleScroll: _.throttle(function(e) {
             const dom = e.target;
@@ -170,15 +187,18 @@ export default {
         }, 300),
 
         nextPage() {
-            const begin = this.page.size * this.page.index;
-            // 没有更多数据了
-            if (begin > this.dataPool.length) {
+            // 尾部没有数据了
+            if (this.page.index + 1 >= this.allSize) {
                 return;
             }
+
+            this.page.index += 1;
+            const begin = this.page.size * this.page.index;
             const end = begin + this.page.size;
+
             const pageData = this.dataPool.slice(begin, end);
             this.data = this.data.concat(pageData);
-            this.page.index += 1;
+            this.lastPageSize = pageData.length;
 
             const cacheCount = this.page.size * this.page.cache;
             // 数据长度超过设置的缓存页数才丢弃缓存中的第一个数据
@@ -193,19 +213,22 @@ export default {
 
         upperPage() {
             // 如果当前页序号减去缓存的页数的号等于或者小于起始页，说明前面没有数据了
-            if (this.page.index <= this.page.cache) {
+            if (this.page.index < this.page.cache) {
                 return;
             }
-            this.page.index -= this.page.cache;
-            const end = this.page.size * this.page.index;
-            const begin = end - this.page.size;
+
+            const begin = (this.page.index - this.page.cache) * this.page.size;
+            const end = begin + this.page.size;
+            this.page.index -= 1;
+
             const pageData = this.dataPool.slice(begin, end);
             this.data = pageData.concat(this.data);
 
             const cacheCount = this.page.size * this.page.cache;
             // 数据长度超过设置的缓存页数才丢弃缓存中的最后一页数据
             if (this.data.length > cacheCount) {
-                this.data.splice(this.data.length - pageData.length, this.data.length);
+                this.data.splice(this.data.length - this.lastPageSize, this.lastPageSize);
+                this.lastPageSize = pageData.length;
                 this.$nextTick(() => {
                     const dom = document.getElementById('tableContainer');
                     dom.scrollTo(0, dom.scrollTop + 47 * pageData.length);
@@ -214,7 +237,7 @@ export default {
         },
 
         resetPage() {
-            this.page.index = 0;
+            this.page.index = -1;
             this.page.size = 20;
         },
 
@@ -222,12 +245,16 @@ export default {
          * @description: 获取表中的所有字段
          */
         handleTableSelct(tableName) {
-            if (tableName === undefined) {
+            if (!tableName) {
                 return;
             }
 
+            // const modelData = this.data[tableName];
             const modelData = this.tableList.find(item => item.tableName === tableName);
-            this.getTableData(tableName)
+            if (!modelData) {
+                return;
+            }
+            this.getTableData(modelData.tableName)
                 .then(data => {
                     if (modelData) {
                         modelData.tableFiled = data;
@@ -250,6 +277,8 @@ export default {
                         let data = res.data.rst;
                         if (Array.isArray(data) && data.length > 0) {
                             resolve(data);
+                        } else {
+                            resolve([]);
                         }
                     })
                     .catch(error => {
