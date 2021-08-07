@@ -7,7 +7,7 @@
         "doc": "doc"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npx webpack serve --config build/webpack.dev.config"
     },
     "repository": {
         "type": "git",
@@ -24,6 +24,10 @@
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
-        "webpack": "^5.36.2"
+        "clean-webpack-plugin": "^4.0.0-alpha.0",
+        "html-webpack-plugin": "^5.3.1",
+        "webpack": "^5.36.2",
+        "webpack-cli": "^4.7.0",
+        "webpack-dev-server": "^3.11.2"
     }
 }
