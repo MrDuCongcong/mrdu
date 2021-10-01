@@ -287,3 +287,7 @@ npm login --login=@company_scope registry=https://registry.common_registry.io/
 ⑴ npm build
 
 这是一个由npm link和npm install组成的管道命令。将项目打成一个包。
+
+[1]: https://juejin.cn/post/6844903870104092680	"为什么引入 npm 包 我们能引入直接使用"
+[2]: https://zhuanlan.zhihu.com/p/337659303	"npm打包时需要注意哪些？如何利用webpack来更好的构建？"
+
