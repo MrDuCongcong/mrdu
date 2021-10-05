@@ -16,17 +16,12 @@
 
 3.  命令行界面（CLI）。开发者在本地主要是通过在终端中进行npm包的安装、卸载等操作，也可以通过命令进行npm网站的登录,账户信息修改等操作。
 
+## **NPM环境安装**
 
+npm的安装有两种方式：
 
-​    
-
-**NPM环境安装**
-
- npm的安装有两种方式：
-
-1.通过Node.js一起安装。
-
-2.使用Node版本管理器（NVM）安装。
+- 通过Node.js一起安装。
+- 使用Node版本管理器（NVM）安装。
 
    使用Node.js安装时会在获取本地权限的目录中安装npm，但是在全局运行npm软件包时会可能会有权限错误。使用NVM安装npm的好处是你可以切换任意版本的Node和npm.
 
@@ -42,7 +37,7 @@ npm版本：
 
 ​    npm install npm @next -g
 
-**NPM本地环境配置**
+## **NPM本地环境配置**
 
 ​    npm可以在本地客户端配置注册表，并从该注册表发布或者安装包。可以通过以下配置其它的npm Enterprise注册表。
 
@@ -78,25 +73,28 @@ npm版本：
 
 npm login --login=@company_scope registry=https://registry.common_registry.io/
 
-**包和模块**
+## **包和模块**
 
-***包和模块简介***
+### ***包和模块简介***
 
 ​    npm的注册表实际上就是一个存储Javascript包的数据库，每个JavaScript包都包含着相应的代码和用于描述该代码的元数据，这些元数据被保存在一个package.json文件中。npm的注册表中存储的可以是包或者是Node模块，下面区别一下包和模块。
 
-   包：对于包来说，每一个包都必须包含一个package.json文件。只有包含package.json文件的包才能被发布到注册表中。
+-    包：对于包来说，每一个包都必须包含一个package.json文件。只有包含package.json文件的包才能被发布到注册表中。
 
-   模块：模块可以是node_modules目录下的文件或者文件夹，可以被Node.js require函数加载，一个模块必须满足以下条件之一：
+-    模块：模块可以是node_modules目录下的文件或者文件夹，可以被Node.js require函数加载，一个模块必须满足以下条件之一：
 
-   ⑴ 一个包含拥有main字段的package.json文件的文件夹。
 
-   ⑵ 包含index.js文件的文件夹。
+1.  一个包含拥有main字段的package.json文件的文件夹。
 
-   ⑶ 一个js文件。
+2.  包含index.js文件的文件夹。
 
-   **由于模块不需要包含package.json文件，因此不是所有的模块都是包，必须满足上述条件的模块才是包。**
+3.   一个js文件。
 
-*** 包的scope ***
+
+>    **由于模块不需要包含package.json文件，因此不是所有的模块都是包，必须满足上述条件的模块才是包。**
+>
+
+### *** 包的scope ***
 
 ​       为了避免包名相同而导致的冲突和‘误植’攻击，npm在版本2之后就命名当对命名方式进行了修改。npm在之后的命名过程中不允许使用大写字母，也不允许使用名称相近的包名。你在注册一个用户或者组织名称的时候，即被分配了一个相匹配的域，你可以使用该域作为命名空间，使用命名空间允许你与别人使用相同的包名而不至于发生冲突。为了避免范围和权限的混淆，你可以将以下范围的概念替换成命名空间，这样你可能比较好理解。
 
@@ -104,7 +102,7 @@ npm login --login=@company_scope registry=https://registry.common_registry.io/
 
 ​    npm scope:         @npm/package_name    npmcorp scope:      @npmcorp/package_name
 
-​    包的范围和可见性：
+###     包的范围和可见性：
 
 ​    ⑴ 未限定范围的包总是公共的。
 
