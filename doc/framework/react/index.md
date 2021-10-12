@@ -4,11 +4,10 @@ React是由facebook开发的用于构建用户界面的JavaScript库。
 
 ## 安装
 
-react和vue一样提供了三种安装方式。
+react提供了三种安装方式。
 
 1. 直接通过<script>标签引入react包。
 2. 通过npm安装。
-3. 
 4. 使用create-react-app工具来构建一个基础的react开发环境。
 
 ## 组件
@@ -147,4 +146,5 @@ React 元素是[不可变对象](https://en.wikipedia.org/wiki/Immutable_object)
 [4]: https://segmentfault.com/a/1190000013040438	"React 中 setState() 为什么是异步的？"
 
 [5]: https://juejin.cn/post/6858276396968951822	"受控组件与非受控组件"
+[6]: https://mp.weixin.qq.com/s/g1q-K5xDTV5nCB6H22L1Zg	"学好这些 React 设计模式，能让你的 React 项目飞起来"
 
