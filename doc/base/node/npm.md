@@ -77,7 +77,7 @@ npm login --login=@company_scope registry=https://registry.common_registry.io/
 
 ### ***包和模块简介***
 
-​    npm的注册表实际上就是一个存储Javascript包的数据库，每个JavaScript包都包含着相应的代码和用于描述该代码的元数据，这些元数据被保存在一个package.json文件中。npm的注册表中存储的可以是包或者是Node模块，下面区别一下包和模块。
+​    npm的仓库（registry）实际上就是一个存储Javascript包的数据库，每个JavaScript包都包含着相应的代码和用于描述该代码的元数据，这些元数据被保存在一个package.json文件中。npm的注册表中存储的可以是包或者是Node模块，下面区别一下包和模块。
 
 -    包：对于包来说，每一个包都必须包含一个package.json文件。只有包含package.json文件的包才能被发布到注册表中。
 
@@ -91,7 +91,7 @@ npm login --login=@company_scope registry=https://registry.common_registry.io/
 3.   一个js文件。
 
 
->    **由于模块不需要包含package.json文件，因此不是所有的模块都是包，必须满足上述条件的模块才是包。**
+>    由于模块不需要包含package.json文件，因此不是所有的模块都是包，必须满足上述条件的模块才是包。
 >
 
 ### *** 包的scope ***
