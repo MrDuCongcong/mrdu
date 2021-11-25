@@ -74,5 +74,5 @@ tsconfig.json文件主要包含5个大的配置项："files"、"include"、"excl
 [1]: https://www.gitmemory.com/issue/ant-design/ant-design-pro/8158/791277893	"tsconfig中的jsx配置"
 [2]: https://zhuanlan.zhihu.com/p/148081795	"esModuleInterop 到底做了什么？"
 
-
+[3]: https://jkchao.github.io/typescript-book-chinese/	"深入理解 TypeScript"
 
