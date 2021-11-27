@@ -75,4 +75,6 @@ tsconfig.json文件主要包含5个大的配置项："files"、"include"、"excl
 [2]: https://zhuanlan.zhihu.com/p/148081795	"esModuleInterop 到底做了什么？"
 
 [3]: https://jkchao.github.io/typescript-book-chinese/	"深入理解 TypeScript"
+[4]: https://blog.csdn.net/lunahaijiao/article/details/115451427	"TypeScript 4.3 beta 版本正式发布......"
+[5]: https://blog.csdn.net/weixin_40906515/article/details/102855234	"Typescript 严格模式有多严格？"
 
