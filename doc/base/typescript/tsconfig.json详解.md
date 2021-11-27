@@ -61,13 +61,37 @@ tsconfig.json文件主要包含5个大的配置项："files"、"include"、"excl
 > - `?`匹配任意一个字符（不包含目录分隔符）
 > - `**/`递归匹配任意子目录
 
+## extends
+
 ## compolierOptions
 
-| 选项      | 类型    | 默认值 | 描述 |
-| --------- | ------- | ------ | ---- |
-| --allowJS | boolean | flase  |      |
-|           |         |        |      |
-|           |         |        |      |
+### 类型检查
+
+
+
+#### allowUnreachableCode（允许不可访问的代码）
+
+不可访问的代码即那些永远不可能被执行的代码。allowUnreachable配置项决定我们如何处理那些永远不会被执行的代码。它有三个值：
+
+- undefined（默认）：编译时抛出建议作为wraning。
+- true：不可访问的代码会被忽略掉，即允许存在不可访问的代码。
+- false：抛出一个不可访问代码的相关编译错误。
+
+#### **allowUnusedLabels（允许未使用的标签）**
+
+虽然通常标签在javascript中使用非常少。但是ts依然提供了针对标签的配置选项。它也有三个值：
+
+- undefined（默认）：编译时在编辑器中抛出建议作为warning。
+- true：未被使用的标签会被忽略掉，允许存在未被使用的标签。
+- false：抛出一个关于存在未被使用的标签的错误。
+
+#### alwaysStrict  
+
+确保文件使用严格模式进行解析。
+
+#### exactOptionalPropertyTypes（精确的可选属性类型）
+
+#### noFallthroughCasesInSwitch（在Switch没有落空Case）
 
 
 
