@@ -17,4 +17,7 @@
 [1]: https://blog.csdn.net/mate_ge/article/details/87563567  "Vue自定义组件：颜色选择器及其实现原理"
 
 [2]: https://github.com/ElemeFE/element "Element UI组件源码"
+[3]: https://blog.csdn.net/qq_41260655/article/details/116032318
+
+
 
