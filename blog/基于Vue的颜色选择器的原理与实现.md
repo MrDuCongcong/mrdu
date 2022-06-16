@@ -36,7 +36,7 @@ getGradientColor(color1, color2, weight) {
 },
 ```
 
-
+https://www.codeusage.com/article/zgR7QdOwoGDVxdyJ.html
 
 ## 参考资料
 [1]: https://blog.csdn.net/mate_ge/article/details/87563567  "Vue自定义组件：颜色选择器及其实现原理"
