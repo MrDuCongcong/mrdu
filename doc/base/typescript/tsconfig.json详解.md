@@ -102,12 +102,12 @@ tsconfig.json文件主要包含5个大的配置项："files"、"include"、"excl
 [1]: https://www.gitmemory.com/issue/ant-design/ant-design-pro/8158/791277893	"tsconfig中的jsx配置"
 [2]: https://zhuanlan.zhihu.com/p/148081795	"esModuleInterop 到底做了什么？"
 
-[3]: https://jkchao.github.io/typescript-book-chinese/	"深入理解 TypeScript"
+
+
 [4]: https://blog.csdn.net/lunahaijiao/article/details/115451427	"TypeScript 4.3 beta 版本正式发布......"
 [5]: https://blog.csdn.net/weixin_40906515/article/details/102855234	"Typescript 严格模式有多严格？"
 
 [6]: https://mariusschulz.com/blog/downlevel-iteration-for-es3-es5-in-typescript	"Downlevel Iteration for ES3/ES5 in TypeScript"
 
-[7]: https://subscription.packtpub.com/book/application_development/9781789345575/1/ch01lvl1sec14/typescript-compiler	"TypeScript 3.0 快速入门指南"
 [8]: https://indepth.dev/posts/1164/configuring-typescript-compiler	"配置 TypeScript 编译器"
 
