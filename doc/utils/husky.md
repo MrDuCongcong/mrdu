@@ -1,1 +1,3 @@
-# [Husky](https://typicode.github.io/husky)
+# husky
+
+[Husky](https://typicode.github.io/husky)
