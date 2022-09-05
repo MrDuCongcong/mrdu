@@ -1,0 +1,9 @@
+.blog {
+    max-width: 50%;
+    margin: auto;
+    .blog-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

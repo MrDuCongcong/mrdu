@@ -3,10 +3,12 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 20px;
+    a {
+        text-decoration: none;
+    }
     .nav-bar__tabs {
         a {
             padding: 0 20px;
-            text-decoration: none;
         }
     }
 }

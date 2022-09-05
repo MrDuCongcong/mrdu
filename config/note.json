@@ -1,0 +1,18 @@
+[
+    {
+        "title": "基础知识",
+        "path": "./../note/base"
+    },
+    {
+        "title": "框架",
+        "path": "./../note/framework"
+    },
+    {
+        "title": "浏览器",
+        "path": "./../note/browser"
+    },
+    {
+        "title": "打包",
+        "path": "./../note/bundle"
+    }
+]
