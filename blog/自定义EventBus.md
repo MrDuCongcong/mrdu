@@ -37,7 +37,7 @@ const eventBus = {
 - `remove()`方法用于将事件监听从`document`对象上移除，防止内存泄露。
 
   ```javascript
-  function dispatch(event, callback) {
+  function remove(event, callback) {
       document.removeEventListener(event, callback);
   }
   ```
