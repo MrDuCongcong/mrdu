@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import AboutMe from './pages/AboutMe';
 import Blog from './pages/Blog';
@@ -10,7 +10,7 @@ import './index.scss';
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<App />}>
                     <Route path="about" element={<AboutMe />}></Route>
@@ -19,7 +19,7 @@ ReactDOM.render(
                     <Route path="interview" element={<Interview />}></Route>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement
 );

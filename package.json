@@ -7,8 +7,8 @@
         "doc": "doc"
     },
     "scripts": {
-        "start": "npx webpack serve --config build/webpack.dev.config",
-        "build": "npx webpack --config build/webpack.dev.config"
+        "start": "webpack serve --config build/webpack.dev.config",
+        "build": "webpack --config build/webpack.dev.config"
     },
     "repository": {
         "type": "git",
