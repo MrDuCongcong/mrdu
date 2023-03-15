@@ -1,0 +1,12 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+.nav-bar a {
+  text-decoration: none;
+}
+.nav-bar .nav-bar__tabs a {
+  padding: 0 20px;
+}/*# sourceMappingURL=NavBar.css.map */
