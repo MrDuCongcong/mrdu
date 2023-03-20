@@ -41,7 +41,6 @@ module.exports = {
         hot: true, // 开启webpack模块热替换功能
         open: true, // 自动打开浏览器
 
-        // publicPath: '/threejs-demo/',
         /**
          *  以下选项只能通过运行时添加命令参数使用
          *  color: false, // 启用或者禁用控制台颜色
