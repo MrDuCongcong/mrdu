@@ -26,4 +26,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
    添加参数会导致单纯使用CPU生成图片。最好使用英伟达的GPU。
 
-   
+
+
+
+https://beta.dreamstudio.ai/generate

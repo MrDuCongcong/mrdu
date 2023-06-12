@@ -51,3 +51,21 @@ ChatGPT提问技巧
 
 - Notion AI。笔记软件，
 
+NewBing的使用
+
+由于bing对于国内的限制，bing.com老是跳转cn.bing.com.
+
+- 把代理切换为全局模式。
+
+- 修改梯子的PAC文件，把`bing.com`添加到PAC文件中。
+
+- 添加HeaderEditor插件，并导入[规则](https://gist.githubusercontent.com/yuhangch/9abc4220af46a1f4a7fc97393e2f040e/raw/89c889b0e7a80446c931823edd612630fd62d165/header-editor-config.json)。 （目前配置失效）。
+
+  
+
+1. 访问bing.com，并在设置中，切换地区为非中国地区（比如日本）。
+
+2. 访问https://www.bing.com/new，然后点击开始聊天，就可以使用接入了chatGPT的new bing了。
+
+   > 使用时可能会出现“ 登录 以提出更多问题并进行更长的对话”的报错。你可以点击右上角头像账号，选择退出，然后刷新页面，就可以正常提问了。不确定这是不是bug。
+
