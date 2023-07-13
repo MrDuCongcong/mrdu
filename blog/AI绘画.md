@@ -30,3 +30,19 @@ https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 
 https://beta.dreamstudio.ai/generate
+
+
+
+
+
+公积金： 0
+
+养老：1月 个人1312 单位 2464
+
+医保：1月 个人320 单位1280
+
+养老   12月 个人1280 单位 2560
+
+医保   12月 个人320 单位1280
+
+1280 + 320  + （2464 + 1280） * 10 / 22
