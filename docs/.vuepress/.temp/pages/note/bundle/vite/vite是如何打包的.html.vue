@@ -1,0 +1,14 @@
+<template><div><h1 id="vite-的基本使用" tabindex="-1"><a class="header-anchor" href="#vite-的基本使用" aria-hidden="true">#</a> Vite 的基本使用</h1>
+<h2 id="vite-的构建流程" tabindex="-1"><a class="header-anchor" href="#vite-的构建流程" aria-hidden="true">#</a> vite 的构建流程</h2>
+<h2 id="vite-的生态支持" tabindex="-1"><a class="header-anchor" href="#vite-的生态支持" aria-hidden="true">#</a> vite 的生态支持</h2>
+<h3 id="typescript" tabindex="-1"><a class="header-anchor" href="#typescript" aria-hidden="true">#</a> typescript</h3>
+<h3 id="框架支持-react、vue" tabindex="-1"><a class="header-anchor" href="#框架支持-react、vue" aria-hidden="true">#</a> 框架支持 (React、Vue)</h3>
+<h3 id="样式支持-less、sass、scss" tabindex="-1"><a class="header-anchor" href="#样式支持-less、sass、scss" aria-hidden="true">#</a> 样式支持（less、sass、scss）</h3>
+<h4 id="使用变量" tabindex="-1"><a class="header-anchor" href="#使用变量" aria-hidden="true">#</a> 使用变量</h4>
+<h3 id="静态资源支持" tabindex="-1"><a class="header-anchor" href="#静态资源支持" aria-hidden="true">#</a> 静态资源支持</h3>
+<h2 id="vite-配置" tabindex="-1"><a class="header-anchor" href="#vite-配置" aria-hidden="true">#</a> vite 配置</h2>
+<h3 id="别名" tabindex="-1"><a class="header-anchor" href="#别名" aria-hidden="true">#</a> 别名</h3>
+<p>别名引发的血案</p>
+</div></template>
+
+

@@ -1,0 +1,41 @@
+<template><div><h1 id="基于vue的颜色选择器的原理与实现" tabindex="-1"><a class="header-anchor" href="#基于vue的颜色选择器的原理与实现" aria-hidden="true">#</a> 基于Vue的颜色选择器的原理与实现</h1>
+<h2 id="颜色的几大要素" tabindex="-1"><a class="header-anchor" href="#颜色的几大要素" aria-hidden="true">#</a> 颜色的几大要素</h2>
+<ul>
+<li>色调。</li>
+<li>饱和度。</li>
+<li>亮度。</li>
+<li>透明度。</li>
+</ul>
+<h2 id="颜色的几种格式" tabindex="-1"><a class="header-anchor" href="#颜色的几种格式" aria-hidden="true">#</a> 颜色的几种格式</h2>
+<ul>
+<li>
+<p>hsl</p>
+</li>
+<li>
+<p>hsv</p>
+</li>
+<li>
+<p>rgb</p>
+</li>
+<li>
+<p>hex</p>
+</li>
+</ul>
+<h2 id="渐变色相关操作" tabindex="-1"><a class="header-anchor" href="#渐变色相关操作" aria-hidden="true">#</a> 渐变色相关操作</h2>
+<p>参考<a href="https://github.com/less/less.js" target="_blank" rel="noopener noreferrer">less<ExternalLinkIcon/></a>的<code v-pre>mix</code>函数</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token function">getGradientColor</span><span class="token punctuation">(</span><span class="token parameter">color1<span class="token punctuation">,</span> color2<span class="token punctuation">,</span> weight</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> w1 <span class="token operator">=</span> weight<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> w2 <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> w1<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> rgb <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">r</span><span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>color1<span class="token punctuation">.</span>r <span class="token operator">*</span> w1 <span class="token operator">+</span> color2<span class="token punctuation">.</span>r <span class="token operator">*</span> w2<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">g</span><span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>color1<span class="token punctuation">.</span>g <span class="token operator">*</span> w1 <span class="token operator">+</span> color2<span class="token punctuation">.</span>g <span class="token operator">*</span> w2<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">b</span><span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>color1<span class="token punctuation">.</span>b <span class="token operator">*</span> w1 <span class="token operator">+</span> color2<span class="token punctuation">.</span>b <span class="token operator">*</span> w2<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> rgb<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>https://www.codeusage.com/article/zgR7QdOwoGDVxdyJ.html</p>
+<h2 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h2>
+</div></template>
+
+

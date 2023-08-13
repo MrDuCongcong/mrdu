@@ -1,0 +1,21 @@
+<template><div><h1 id="常见问题" tabindex="-1"><a class="header-anchor" href="#常见问题" aria-hidden="true">#</a> 常见问题</h1>
+<ul>
+<li>
+<h3 id="electron-安装时报错-requesterror-read-econnreset" tabindex="-1"><a class="header-anchor" href="#electron-安装时报错-requesterror-read-econnreset" aria-hidden="true">#</a> Electron 安装时报错 RequestError: read ECONNRESET</h3>
+<p>electron安装包比较大，而且默认使用GitHub上安装的，因此下载比较慢。国内可以使用阿里的镜像站下载。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> ELECTRON_MIRROR http://npm.taobao.org/mirrors/electron/
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<h3 id="" tabindex="-1"><a class="header-anchor" href="#" aria-hidden="true">#</a> </h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--g</span> <span class="token parameter variable">--production</span> windows-build-tools
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>
+<h3 id="-1" tabindex="-1"><a class="header-anchor" href="#-1" aria-hidden="true">#</a> </h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> --build-from-resource
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+</ul>
+</div></template>
+
+

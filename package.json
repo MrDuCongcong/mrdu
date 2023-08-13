@@ -1,44 +1,18 @@
 {
-    "name": "mrdu",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "directories": {
-        "doc": "doc"
-    },
-    "scripts": {
-        "start": "webpack serve --config build/webpack.dev.config",
-        "build": "webpack --config build/webpack.dev.config"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/MrDuCongcong/mrdu.git"
-    },
-    "author": "杜聪聪",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/MrDuCongcong/mrdu/issues"
-    },
-    "homepage": "https://github.com/MrDuCongcong/mrdu#readme",
-    "devDependencies": {
-        "@types/react": "^18.0.18",
-        "@types/react-dom": "^18.0.6",
-        "clean-webpack-plugin": "^4.0.0-alpha.0",
-        "css-loader": "^6.7.1",
-        "html-webpack-plugin": "^5.3.1",
-        "markdown-it": "^13.0.1",
-        "sass": "^1.54.8",
-        "sass-loader": "^13.0.2",
-        "style-loader": "^3.3.1",
-        "ts-loader": "^9.3.1",
-        "typescript": "^4.8.2",
-        "webpack": "^5.36.2",
-        "webpack-cli": "^4.7.0",
-        "webpack-dev-server": "^3.11.2"
-    },
-    "dependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.3.0"
-    }
+  "name": "mrdu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.63",
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.63"
+  }
 }
