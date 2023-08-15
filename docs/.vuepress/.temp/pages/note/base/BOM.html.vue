@@ -1,8 +1,0 @@
-<template><div><h1 id="bom" tabindex="-1"><a class="header-anchor" href="#bom" aria-hidden="true">#</a> BOM</h1>
-<h2 id="window对象" tabindex="-1"><a class="header-anchor" href="#window对象" aria-hidden="true">#</a> window对象</h2>
-<h2 id="location对象" tabindex="-1"><a class="header-anchor" href="#location对象" aria-hidden="true">#</a> location对象</h2>
-<h2 id="navigator对象" tabindex="-1"><a class="header-anchor" href="#navigator对象" aria-hidden="true">#</a> navigator对象</h2>
-<h2 id="history对象" tabindex="-1"><a class="header-anchor" href="#history对象" aria-hidden="true">#</a> history对象</h2>
-</div></template>
-
-

@@ -14,11 +14,20 @@ export default defineUserConfig({
 				text: '笔记',
 				link: '/note/',
 			},
+			{
+				text: '面试',
+				link: '/interview/'
+			}
 		],
 		sidebar: {
-            '/blog/': [
-                '前端监控'
-            ]
-        },
+			'/blog/': [
+		       '微前端',
+			   '前端监控',
+			   '手写常用的工具函数',
+			],
+			'/interview': [
+				'react'
+			]
+		},
 	}),
 });
