@@ -29,24 +29,31 @@ export default defineUserConfig({
 			'/note/': [
 				{
                     text: '基础知识',
-                    link: '/base/',
 					children: [
 						{
 							text: 'JavaScript',
-                            link: '/javascript/',
 							children: [
-								'类型',
-								'函数',
-								'对象',
+								{
+									text: '类型',
+									link: '/note/base/javascript/类型.md',
+								},
+								{
+									text: '函数',
+									link: '/note/base/javascript/函数.md',
+								},
 							]    
 						},
                         {
                             text: 'CSS',
-                            link: '/css/',
 							children: [
-                                '基础知识',
-                                'flex布局',
-                                '栅格布局',
+								{
+									text: '基础知识',
+                                    link: '/note/base/css/基础知识.md',
+								},
+								{
+									text: 'flex布局',
+                                    link: '/note/base/css/flex布局.md',
+								},
 							]
                         },
 						
@@ -54,7 +61,7 @@ export default defineUserConfig({
                 },
 				{
                     text: '框架',
-                    link: '/framework/',
+					collapsible: true,
 					children: [
 						{
 							text: 'React',
@@ -66,6 +73,15 @@ export default defineUserConfig({
                         },
 					]
                 },
+				{
+					text: '部署',
+					children: [
+						{
+							text: 'Docker',
+                            link: '/note/deploy/docker.md',
+						}
+					]
+				}
 			],
 			'/interview/': [
 				'TypeScript',
