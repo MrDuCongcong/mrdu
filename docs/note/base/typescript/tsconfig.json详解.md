@@ -42,7 +42,7 @@ tsconfig.json文件主要包含5个大的配置项："files"、"include"、"excl
 
 ## exclude
 
-需要排除的文件或目录，仅用于更排除掉"include"`设置中包含的文件。虽然它能够过滤掉`"include"`引入的文件，但是`files`和`<reference>`明确指定的文件却会始终包含在内。默认情况下回排除掉 `node_modules`、`bower_components`、`jspn_packages`目录和`<outDir>`目录。
+需要排除的文件或目录，仅用于更排除掉`"include"`设置中包含的文件。虽然它能够过滤掉`"include"`引入的文件，但是`files`和`<reference>`明确指定的文件却会始终包含在内。默认情况下回排除掉 `node_modules`、`bower_components`、`jspn_packages`目录和`<outDir>`目录。
 
 ```json
 {
